@@ -17,24 +17,25 @@ WIN_COMBINATIONS = [
   [2,4,6]
   ]
   
-  def won?(board)
-    WIN_COMBINATIONS.detect do |win_combination|
-      if board[win_combination[0]] == board[win_combination[1]] && board[win_combination[1]] == board[win_combination[2]] && position_taken?(board, win_combination[0])
-        win_combination 
-      end
+def won?(board)
+  WIN_COMBINATIONS.detect do |win_combination|
+    if board[win_combination[0]] == board[win_combination[1]] && board[win_combination[1]] == board[win_combination[2]] && position_taken?(board, win_combination[0])
+      win_combination 
     end
   end
+end
   
-  def full?(board)
-    board.all? {|move| move == "X" || move == "O"}
-  end
+def full?(board)
+  board.all? {|move| move == "X" || move == "O"}
+end
   
-  def draw?(board)
-    full?(board) && !won?(board)
-  end
+def draw?(board)
+  full?(board) && !won?(board)
+end
   
-  def over?(board)
+def over?(board)
   
+end
   
   
   
