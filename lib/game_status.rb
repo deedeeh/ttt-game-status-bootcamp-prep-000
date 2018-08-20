@@ -40,7 +40,6 @@ end
 def winner(board)
   if won?(board)
     board[won?(board).first]
-    binding.pry
   end
 end
 
